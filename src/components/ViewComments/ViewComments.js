@@ -1,6 +1,5 @@
 import React from 'react';
 import './ViewComments.css';
-import mysql from 'mysql';
 
 function ViewComments() {
     var htmlComments = (
@@ -12,10 +11,10 @@ function ViewComments() {
     var commentDefault = (
         <>
             <li>
-            <div class="container-comment">
-            <span class="comment" id=""></span>
-            <button type="submit" class="btn-listen" id="" onclick="">
-                <span class="btn-title">Ouvir</span>
+            <div className="container-comment">
+            <span className="comment" id=""></span>
+            <button type="submit" className="btn-listen" id="" onclick="">
+                <span className="btn-title">Ouvir</span>
             </button>
             </div>
             </li>

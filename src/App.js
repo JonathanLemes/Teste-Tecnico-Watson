@@ -2,24 +2,20 @@ import React from 'react';
 import './App.css';
 import InsertComment from './components/InsertComment/InsertComment';
 import ViewComments from './components/ViewComments/ViewComments';
+import ScriptTag from 'react-script-tag';
 
 function App() {
   return (
     <div className="App">
-      <head>
-      <meta charset="UTF-8" />
-    </head>
-    <body>
-      <section class="container">
-        <div class="column">
+      <section className="container">
+        <div className="column">
           <InsertComment />
         </div>
         <hr width="2" size="500" />
-        <div class="column">
+        <div className="column">
           <ViewComments />
         </div>
-      </section>    
-    </body>
+      </section>
     </div>
   );
 }
