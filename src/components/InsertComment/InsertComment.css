@@ -1,0 +1,14 @@
+.text-area {
+    min-width: 500px;
+    padding: 3px;
+}
+
+.btn-insert {
+    box-shadow: 1px 1px 5px #000;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #ccc;
+    border: none;
+    cursor: pointer;
+}

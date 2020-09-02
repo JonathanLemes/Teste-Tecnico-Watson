@@ -1,0 +1,26 @@
+.container-comment {
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.comment {
+    margin: 0px 20px;
+    font-weight: bold;
+    font-size: 14px;
+    color: grey;
+}
+
+.btn-listen {
+    margin: 0px 20px;
+    width: 200px;
+    padding: 5px;
+    border-radius: 5px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px #000;
+    background-color: #ccc;
+    border: none;
+    cursor: pointer;
+}
