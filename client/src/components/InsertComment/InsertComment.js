@@ -20,6 +20,7 @@ class InsertComment extends Component {
             axios.post(`http://localhost:8080/insert?sentence=${this.state.sentence}`, {})
             .then((response) => {
                 this.setState({ sentence: '', isLoading: false });
+                window.location.reload();
             })
             .catch((err) => {
                 this.setState({ data: err, isLoading: false });
