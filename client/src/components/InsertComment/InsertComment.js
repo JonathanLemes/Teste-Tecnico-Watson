@@ -9,13 +9,11 @@ class InsertComment extends Component {
         this.state = {
                sentence: '',
                isLoading: false,
-         };
-         this.insertComment = this.insertComment.bind(this);
+        };
+        this.insertComment = this.insertComment.bind(this);
     }
 
     insertComment = () => {
-        this.setState({ isLoading: true });
-
         if (this.state.sentence !== '') {
             axios.post(`http://localhost:8080/insert?sentence=${this.state.sentence}`, {})
             .then((response) => {
