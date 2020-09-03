@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import './InsertComment.css';
-import Request from 'axios-react';
 import axios from 'axios';
 
 class InsertComment extends Component {
@@ -18,7 +17,9 @@ class InsertComment extends Component {
             axios.post(`http://localhost:8080/insert?sentence=${this.state.sentence}`, {})
             .then((response) => {
                 this.setState({ sentence: '', isLoading: false });
-                window.location.reload();
+                setTimeout(() => {
+                    window.location.reload();
+                }, 1500);
             })
             .catch((err) => {
                 this.setState({ data: err, isLoading: false });
