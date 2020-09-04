@@ -1,5 +1,11 @@
 # Teste Técnico da API Text to Speech
 
+---
+
+Instalações necessárias para a execução do projeto: [MySQL](https://dev.mysql.com/downloads/installer/), [Node JS](https://nodejs.org/en/download/) e [Yarn](https://classic.yarnpkg.com/en/docs/install/#windows-stable).
+
+---
+
 ## Explicação
 
 Este código consiste na simulação de uma comunicação entre cliente e o servidor, para o cadastro e execução de áudios .mp3 por um banco de dados MySQL.
@@ -20,10 +26,6 @@ Primeiramente, é necessária a configuração para a conexão com seu banco de 
 - "mySQLPort": "*[PORTA QUE O MYSQL SE ENCONTRA]*",
 - "expressServerPort": *[PORTA LIVRE PARA A EXECUÇÃO DO SERVIDOR EXPRESS]*
 >**Nota:** O React app inicia automaticamente na porta 3000, para alterar a porta, altere o script start em */client/package.json* para "set PORT=*[PORTA INUTILIZADA]* && react-scripts start" (para Windows) ou "export PORT=*[PORTA INUTILIZADA]* react-scripts start" (para Linux e MacOS).
-
----
-
-Instalações necessárias para a execução do projeto: [MySQL](https://dev.mysql.com/downloads/installer/), [Node JS](https://nodejs.org/en/download/) e [Yarn](https://classic.yarnpkg.com/en/docs/install/#windows-stable).
 
 ---
 
