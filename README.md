@@ -1,68 +1,32 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Teste Técnico da API Text to Speech
 
-## Available Scripts
+## Explicação
 
-In the project directory, you can run:
+Este código consiste na simulação de uma comunicação entre cliente e o servidor, para o cadastro e execução de áudios .mp3 por um banco de dados MySQL.
+O cliente possui acesso a um aplicativo React, que faz as requisições a um servidor ExpressJS, responsável pela conexão com o banco de dados e pela API do IBM Watson Text to Speech.
+
+**Servidor:** O servidor ExpressJS é executado, realizando a conexão direta com o banco de dados MySQL e conectando-se à porta selecionada na configuração e criando o banco e tabelas se necessário. As requisições esperadas retornam os dados da tabela, inserem novas frases (salvas ao lado do servidor na pasta */server/audios*) e hospedam as mesmas no localhost.
+>**Nota:** O arquivo de configuração está ao lado do cliente devido a especificações do React App no ambiente de desenvolvimento.
+**Cliente:** O React App executa o Front-End da aplicação, em conjunto com requisições AJAX através das bibliotecas Axios e Axios-React. As requisições são responsáveis por cadastrar novas frases, recuperá-las pelo banco e executá-las através do localhost.
+
+---
+
+## Execução
+
+Primeiramente, é necessária a configuração para a conexão com seu banco de dados local. Estando na raiz do projeto, navegue para a pasta **/client/src/** e selecione o arquivo configs.json para edição.
+- "mySQLHost": "*[IP NO QUAL O MYSQL ESTÁ SENDO EXECUTADO]*",
+- "mySQLUser": "*[USUÁRIO MYSQL]*",
+- "mySQLPassword": "*[SENHA MYSQL]*",
+- "mySQLPort": "*[PORTA QUE O MYSQL SE ENCONTRA]*",
+- "expressServerPort": *[PORTA LIVRE PARA A EXECUÇÃO DO SERVIDOR EXPRESS]*
+>**Nota:** O React app inicia automaticamente na porta 3000, para alterar a porta, altere o script start em */client/package.json* para "set PORT=*[PORTA INUTILIZADA]* && react-scripts start" (para Windows) ou "export PORT=*[PORTA INUTILIZADA]* react-scripts start" (para Linux e MacOS).
+
+---
+
+Instalações necessárias para a execução do projeto: [MySQL](https://dev.mysql.com/downloads/installer/), [Node JS](https://nodejs.org/en/download/) e [Yarn](https://classic.yarnpkg.com/en/docs/install/#windows-stable).
+
+---
+
+Por fim, na pasta raiz do projeto, execute o comando:
 
 ### `yarn start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
