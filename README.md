@@ -32,3 +32,7 @@ Primeiramente, é necessária a configuração para a conexão com seu banco de 
 Por fim, na pasta raiz do projeto, execute o comando:
 
 ### `yarn start`
+
+---
+
+### Criado por: [Jonathan Fillipe Lemes](https://github.com/JonathanLemes/)
