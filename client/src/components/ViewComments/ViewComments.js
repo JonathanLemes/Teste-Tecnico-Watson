@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './ViewComments.css';
 import ReactAudioPlayer from 'react-audio-player';
 import axios from 'axios';
+import configs from '../../configs.json';
 
 class ViewComments extends Component {
     constructor(props){
@@ -12,7 +13,7 @@ class ViewComments extends Component {
 
     async componentDidMount() {
         var html = [];
-        await axios.get(`http://localhost:8080/`, {})
+        await axios.get(`http://localhost:${configs.expressServerPort}/`, {})
         .then((response) => {
             html = response.data.res;
         })
@@ -31,7 +32,7 @@ class ViewComments extends Component {
                         <div className="container-comment">
                             <span className="comment" id={i}>{item.sentence}</span>
                             <ReactAudioPlayer
-                                src={`http://localhost:8080/audios/?timestamp=${item.timestamp}`}
+                                src={`http://localhost:${configs.expressServerPort}/audios/?timestamp=${item.timestamp}`}
                                 controls
                             />
                         </div>

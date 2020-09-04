@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './InsertComment.css';
 import axios from 'axios';
+import configs from '../../configs.json';
 
 class InsertComment extends Component {
     constructor(props){
@@ -14,7 +15,7 @@ class InsertComment extends Component {
 
     insertComment = () => {
         if (this.state.sentence !== '') {
-            axios.post(`http://localhost:8080/insert?sentence=${this.state.sentence}`, {})
+            axios.post(`http://localhost:${configs.expressServerPort}/insert?sentence=${this.state.sentence}`, {})
             .then((response) => {
                 this.setState({ sentence: '', isLoading: false });
             })

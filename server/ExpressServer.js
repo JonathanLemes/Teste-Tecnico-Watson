@@ -7,6 +7,7 @@ const TextToSpeechV1 = require('ibm-watson/text-to-speech/v1');
 const { IamAuthenticator } = require('ibm-watson/auth');
 const credentials = require('./credentials.json');
 const { response } = require("express");
+const configs = require("../client/src/configs.json");
 
 const app = express();
 
@@ -15,9 +16,10 @@ app.use(bodyParser.json());
 app.use(cors());
 
 var connection = mysql.createConnection({
-  host     : "localhost",
-  user     : "root",
-  password : "password",
+  host     : configs.mySQLHost,
+  user     : configs.mySQLUser,
+  password : configs.mySQLPassword,
+  port: configs.mySQLPort,
   multipleStatements: true
 });
 
@@ -83,7 +85,7 @@ connection.connect((err) => {
       });
     });
     
-    app.listen("8080", () => {
+    app.listen(configs.expressServerPort, () => {
       //Servidor rodando na porta selecionada
     });
   });

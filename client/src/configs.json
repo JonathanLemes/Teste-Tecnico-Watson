@@ -1,0 +1,7 @@
+{
+    "mySQLHost": "localhost",
+    "mySQLUser": "root",
+    "mySQLPassword": "password",
+    "mySQLPort": "3306",
+    "expressServerPort": "8080"
+}
