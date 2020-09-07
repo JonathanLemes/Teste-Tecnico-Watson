@@ -13,6 +13,7 @@ O cliente possui acesso a um aplicativo React, que faz as requisições a um ser
 
 **Servidor:** O servidor ExpressJS é executado, realizando a conexão direta com o banco de dados MySQL e conectando-se à porta selecionada na configuração e criando o banco e tabelas se necessário. As requisições esperadas retornam os dados da tabela, inserem novas frases (salvas ao lado do servidor na pasta */server/audios*) e hospedam as mesmas no localhost.
 >**Nota:** O arquivo de configuração está ao lado do cliente devido a especificações do React App no ambiente de desenvolvimento.
+
 **Cliente:** O React App executa o Front-End da aplicação, em conjunto com requisições AJAX através das bibliotecas Axios e Axios-React. As requisições são responsáveis por cadastrar novas frases, recuperá-las pelo banco e executá-las através do localhost.
 
 ---
